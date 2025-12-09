@@ -1,14 +1,15 @@
-import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
+import logo from "./assests/logo.png";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navigation = [
-    { name: 'Home', href: '#' },
-    { name: 'Product', href: '#' },
-    { name: 'About Us', href: '#' },
-    { name: 'Contact Us', href: '#' }
+    { name: "Home", href: "#" },
+    { name: "Product", href: "#" },
+    { name: "About Us", href: "#" },
+    { name: "Contact Us", href: "#" },
   ];
 
   return (
@@ -17,20 +18,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center gap-3 flex-shrink-0">
-            <div className="relative w-10 h-10">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-7 h-7 border-4 border-purple-700 transform rotate-0" style={{ clipPath: 'polygon(50% 0%, 100% 100%, 0% 100%)' }}></div>
-              </div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-5 h-5 rounded-full border-4 border-red-500"></div>
-              </div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="relative">
-                  <div className="w-2 h-0.5 bg-emerald-600"></div>
-                  <div className="w-0.5 h-2 bg-emerald-600 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
-                </div>
-              </div>
-            </div>
+            <img src={logo} alt="logo" className="max-w-[11%]" />
             <div className="hidden sm:block">
               <p className="text-lg font-bold text-gray-900">Adonai</p>
               <p className="text-xs text-gray-600">Life Pharmacy</p>
@@ -62,11 +50,7 @@ export default function Header() {
             onClick={() => setIsOpen(!isOpen)}
             className="lg:hidden inline-flex items-center justify-center p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors"
           >
-            {isOpen ? (
-              <X className="w-6 h-6" />
-            ) : (
-              <Menu className="w-6 h-6" />
-            )}
+            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
       </div>

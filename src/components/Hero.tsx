@@ -1,4 +1,5 @@
-import { Pill, Heart, Shield } from 'lucide-react';
+import { Pill, Heart, Shield } from "lucide-react";
+import logo from "./assests/logo.png";
 
 export default function Hero() {
   return (
@@ -12,20 +13,7 @@ export default function Hero() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
         <div className="mb-8 flex justify-center">
           <div className="relative">
-            <div className="w-32 h-32 flex items-center justify-center">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-24 h-24 border-8 border-purple-700 transform rotate-0" style={{ clipPath: 'polygon(50% 0%, 100% 100%, 0% 100%)' }}></div>
-              </div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-20 h-20 rounded-full border-8 border-red-500"></div>
-              </div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="relative">
-                  <div className="w-6 h-2 bg-emerald-600"></div>
-                  <div className="w-2 h-6 bg-emerald-600 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
-                </div>
-              </div>
-            </div>
+            <img src={logo} alt="logi" className="max-w-[40%] ml-[10rem]" />
           </div>
         </div>
 
@@ -35,7 +23,8 @@ export default function Hero() {
         </h1>
 
         <p className="text-xl sm:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
-          Your trusted partner in holistic healthcare. Faith-inspired wellness, modern medical expertise, and compassionate care for every individual.
+          Your trusted partner in holistic healthcare. Faith-inspired wellness,
+          modern medical expertise, and compassionate care for every individual.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
@@ -52,24 +41,36 @@ export default function Hero() {
             <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mb-4">
               <Pill className="w-8 h-8 text-emerald-700" />
             </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Trusted Medications</h3>
-            <p className="text-gray-600 text-sm">Quality pharmaceuticals you can rely on</p>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              Trusted Medications
+            </h3>
+            <p className="text-gray-600 text-sm">
+              Quality pharmaceuticals you can rely on
+            </p>
           </div>
 
           <div className="flex flex-col items-center p-6 bg-white/60 backdrop-blur-sm rounded-2xl border border-gray-100 hover:shadow-lg transition-all duration-300">
             <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-4">
               <Heart className="w-8 h-8 text-purple-700" />
             </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Compassionate Care</h3>
-            <p className="text-gray-600 text-sm">Personal attention for your wellbeing</p>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              Compassionate Care
+            </h3>
+            <p className="text-gray-600 text-sm">
+              Personal attention for your wellbeing
+            </p>
           </div>
 
           <div className="flex flex-col items-center p-6 bg-white/60 backdrop-blur-sm rounded-2xl border border-gray-100 hover:shadow-lg transition-all duration-300">
             <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-4">
               <Shield className="w-8 h-8 text-red-600" />
             </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Faith-Led Values</h3>
-            <p className="text-gray-600 text-sm">Healthcare rooted in integrity</p>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              Faith-Led Values
+            </h3>
+            <p className="text-gray-600 text-sm">
+              Healthcare rooted in integrity
+            </p>
           </div>
         </div>
       </div>
